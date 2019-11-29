@@ -7,15 +7,26 @@ import java.io.IOException;
 
 public class StateCensusAnalyserTest {
     @Test
-    public void givenNumberOf_Records_Match() {
-        try {
+    public void givenNumberOf_Records_Match() throws CensusExceptions {
+        StateCensusAnalyser analyserTest = new StateCensusAnalyser();
+        int count = analyserTest.countTheRecord();
+        Assert.assertEquals(37, count);
+    }
+
+    @Test
+    public void throws_IOException() {
+        try{
             StateCensusAnalyser analyserTest = new StateCensusAnalyser();
-            int count=analyserTest.countTheRecord();
-            Assert.assertEquals(37,count);
-        } catch (IOException e) {
-            e.printStackTrace();
+            int count = analyserTest.countTheRecord();
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.IO_EXCEPTION,censusExceptions.type);
         }
     }
 
 
 }
+
+
+
+

@@ -10,9 +10,9 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 
 public class StateCensusAnalyser {
-    private static final String SAMPLE_CSV_FILE_PATH = "/home/admin293/Desktop/IndianStateCensus/StateCode.csv";
+    private static final String SAMPLE_CSV_FILE_PATH = "/home/admin293/Desktop/IndianStateCensus/StateCod.csv";
 
-    public int countTheRecord() throws IOException {
+    public int countTheRecord() throws CensusExceptions {
         int noOfRecordCount = 0;
         try (
                 Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
@@ -26,7 +26,9 @@ public class StateCensusAnalyser {
                 CSVStates csvStates=csvStatesIterator.next();
                 noOfRecordCount++; }
         } catch (IOException e) {
-            e.printStackTrace(); }
+           throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION,
+                   "File not inputed properly");
+        }
         return noOfRecordCount;
     }
 }
