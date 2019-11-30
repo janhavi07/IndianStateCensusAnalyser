@@ -1,7 +1,7 @@
 package com.csv.com.csv;
 
 public class CensusExceptions extends Exception {
-    enum ExceptionType{IO_EXCEPTION,INCORRECT_TYPE
+    enum ExceptionType{IO_EXCEPTION,INCORRECT_TYPE,
 
     }
     ExceptionType type;

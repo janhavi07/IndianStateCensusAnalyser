@@ -24,6 +24,17 @@ public class StateCensusAnalyserTest {
         }
     }
 
+    @Test
+    public void whenIncorrectFileTye_Throws_Exception() {
+        try {
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            int count = censusAnalyser.countTheRecord();
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE,censusExceptions.type);
+
+        }
+    }
 
 }
 

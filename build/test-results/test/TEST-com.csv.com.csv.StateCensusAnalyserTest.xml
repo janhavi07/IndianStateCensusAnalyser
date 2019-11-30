@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.csv.com.csv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-29T13:15:52" hostname="admin293-H110M-H" time="0.008">
+<testsuite name="com.csv.com.csv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-30T05:56:23" hostname="admin293-H110M-H" time="0.049">
   <properties/>
-  <testcase name="throws_IOException" classname="com.csv.com.csv.StateCensusAnalyserTest" time="0.008"/>
+  <testcase name="whenIncorrectFileTye_Throws_Exception" classname="com.csv.com.csv.StateCensusAnalyserTest" time="0.049"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[com.csv.com.csv.CensusExceptions: File not inputed properly
-	at com.csv.com.csv.StateCensusAnalyser.countTheRecord(StateCensusAnalyser.java:29)
-	at com.csv.com.csv.StateCensusAnalyserTest.throws_IOException(StateCensusAnalyserTest.java:20)
+  <system-err><![CDATA[com.csv.com.csv.CensusExceptions: Incorrect type of file
+	at com.csv.com.csv.StateCensusAnalyser.countTheRecord(StateCensusAnalyser.java:34)
+	at com.csv.com.csv.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception(StateCensusAnalyserTest.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

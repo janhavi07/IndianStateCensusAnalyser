@@ -2,15 +2,18 @@ package com.csv.com.csv;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import com.opencsv.exceptions.CsvException;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.Iterator;
 
 public class StateCensusAnalyser {
-    private static final String SAMPLE_CSV_FILE_PATH = "/home/admin293/Desktop/IndianStateCensus/StateCod.csv";
+    private static final String SAMPLE_CSV_FILE_PATH = "/home/admin293/Desktop/IndianStateCensus/StateCode.csv";
 
     public int countTheRecord() throws CensusExceptions {
         int noOfRecordCount = 0;
@@ -23,12 +26,17 @@ public class StateCensusAnalyser {
                     .build();
             Iterator<CSVStates> csvStatesIterator = csvToBean.iterator();
             while (csvStatesIterator.hasNext()) {
-                CSVStates csvStates=csvStatesIterator.next();
-                noOfRecordCount++; }
-        } catch (IOException e) {
-           throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION,
-                   "File not inputed properly");
+                CSVStates csvStates = csvStatesIterator.next();
+                noOfRecordCount++;
+            }
         }
+//        catch (RuntimeException e){
+//            throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_TYPE,"Incorrect type of file");
+//        }
+        catch (IOException e) {
+            throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION,
+                    "File not inputed properly");}
         return noOfRecordCount;
     }
+
 }
