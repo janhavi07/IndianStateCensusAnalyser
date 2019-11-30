@@ -15,12 +15,12 @@ public class StateCensusAnalyserTest {
 
     @Test
     public void throws_IOException() {
-        try{
+        try {
             StateCensusAnalyser analyserTest = new StateCensusAnalyser();
-            int count = analyserTest.countTheRecord();
+            analyserTest.countTheRecord();
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
-            Assert.assertEquals(CensusExceptions.ExceptionType.IO_EXCEPTION,censusExceptions.type);
+            Assert.assertEquals(CensusExceptions.ExceptionType.IO_EXCEPTION, censusExceptions.type);
         }
     }
 
@@ -31,11 +31,33 @@ public class StateCensusAnalyserTest {
             int count = censusAnalyser.countTheRecord();
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
-            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE,censusExceptions.type);
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
 
         }
     }
 
+    @Test
+    public void whenIncorrectDelimiter_Throws_Exception() {
+        try {
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            censusAnalyser.countTheRecord();
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
+        }
+    }
+
+    @Test
+    public void whenNoHeader_IsGiven_ThrowsException() {
+        try {
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            censusAnalyser.countTheRecord();
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
+
+        }
+    }
 }
 
 

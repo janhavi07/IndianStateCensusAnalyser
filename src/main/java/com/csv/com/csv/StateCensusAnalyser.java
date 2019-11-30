@@ -29,11 +29,12 @@ public class StateCensusAnalyser {
                 CSVStates csvStates = csvStatesIterator.next();
                 noOfRecordCount++;
             }
-        }
-//        catch (RuntimeException e){
-//            throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_TYPE,"Incorrect type of file");
-//        }
-        catch (IOException e) {
+        }catch (NullPointerException e) {
+            throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_DELIMITER, "Incorrect delimiter given");
+        }catch (RuntimeException e){
+            throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_TYPE,
+                    "Incorrect type of file,Header fle missing");
+        } catch (IOException e) {
             throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION,
                     "File not inputed properly");}
         return noOfRecordCount;

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815c5c32-945f-4f72-8249-710771bd81a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/StateCensusData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,7 +13,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/CensusExceptions$ExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/CensusExceptions$ExceptionType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateCensusData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/StateCensusData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/StateCode.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/StateCensusAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/StateCensusAnalyser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/csv/com/csv/StateCensusAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/csv/com/csv/StateCensusAnalyserTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.csv.com.csv.StateCensusAnalyserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.csv.com.csv.StateCensusAnalyserTest.html" afterDir="false" />
@@ -85,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception">
+  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest.whenNoHeader_IsGiven_ThrowsException">
     <configuration name="StateCensusAnalyserTest.givenNumberOf_Records_Match" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -126,6 +126,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="StateCensusAnalyserTest.whenIncorrectDelimiter_Throws_Exception" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.csv.com.csv.StateCensusAnalyserTest.whenIncorrectDelimiter_Throws_Exception&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -146,11 +166,33 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="StateCensusAnalyserTest.whenNoHeader_IsGiven_ThrowsException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.csv.com.csv.StateCensusAnalyserTest.whenNoHeader_IsGiven_ThrowsException&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception" />
-        <item itemvalue="Gradle.StateCensusAnalyserTest.throws_IOException" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.whenNoHeader_IsGiven_ThrowsException" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.whenIncorrectDelimiter_Throws_Exception" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.givenNumberOf_Records_Match" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.throws_IOException" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception" />
       </list>
     </recent_temporary>
   </component>
