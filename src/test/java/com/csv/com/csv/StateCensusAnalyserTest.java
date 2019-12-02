@@ -77,6 +77,19 @@ public class StateCensusAnalyserTest {
         }
     }
 
+    @Test
+    public void whenIncorrectFileTye_Throws_Exception_in_CSVCensusData() {
+        try {
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            int count = censusAnalyser.countTheRecord2();
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
+
+        }
+    }
+
+
 
 
 
