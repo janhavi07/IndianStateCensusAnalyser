@@ -89,6 +89,17 @@ public class StateCensusAnalyserTest {
         }
     }
 
+    @Test
+    public void whenIncorrectDelimiter_Throws_Exception_In_CSVCensusData() {
+        try {
+            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
+            censusAnalyser.countTheRecord2();
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
+        }
+    }
+
 
 
 
