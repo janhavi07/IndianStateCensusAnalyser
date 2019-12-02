@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.csv.com.csv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-02T06:45:19" hostname="admin293-H110M-H" time="0.117">
+<testsuite name="com.csv.com.csv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-02T06:49:13" hostname="admin293-H110M-H" time="0.114">
   <properties/>
-  <testcase name="throws_IOException_with_File_2" classname="com.csv.com.csv.StateCensusAnalyserTest" time="0.117"/>
+  <testcase name="throws_IOException_In_CSVCensus_Data" classname="com.csv.com.csv.StateCensusAnalyserTest" time="0.114"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

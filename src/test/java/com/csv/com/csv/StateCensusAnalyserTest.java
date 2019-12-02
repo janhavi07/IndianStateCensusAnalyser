@@ -66,6 +66,16 @@ public class StateCensusAnalyserTest {
         int count = analyserTest.countTheRecord2();
         Assert.assertEquals(29, count);
     }
+    @Test
+    public void throws_IOException_In_CSVCensus_Data() {
+        try {
+            StateCensusAnalyser analyserTest = new StateCensusAnalyser();
+            analyserTest.countTheRecord2();
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.IO_EXCEPTION, censusExceptions.type);
+        }
+    }
 
 
 
