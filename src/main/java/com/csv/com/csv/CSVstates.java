@@ -2,7 +2,7 @@ package com.csv.com.csv;
 
 import com.opencsv.bean.CsvBindByName;
 
-public class CSVStates {
+public class CSVstates {
     @CsvBindByName
     private Integer SrNo;
 

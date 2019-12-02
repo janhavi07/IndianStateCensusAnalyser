@@ -6,19 +6,23 @@ import org.junit.Test;
 import java.io.IOException;
 
 public class StateCensusAnalyserTest {
-    // private static final String SAMPLE_CSV_FILE_PATH = "/home/admin293/Desktop/IndianStateCensus/StateCode.csv";
+   StateCensusAnalyser analyserTest = new StateCensusAnalyser();
+
     @Test
-    public void givenNumberOf_Records_Match_In_CSVStatesData() throws CensusExceptions {
-        StateCensusAnalyser analyserTest = new StateCensusAnalyser();
-        int count = analyserTest.countTheRecord1();
-        Assert.assertEquals(37, count);
+    public void givenNumberOf_Records_Match_In_CSVStatesData()  {
+        try {
+            int count = analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCode.csv",new CSVstates());
+            Assert.assertEquals(37, count);
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+        }
     }
+
 
     @Test
     public void throws_IOException_In_CSVStatesData() {
         try {
-            StateCensusAnalyser analyserTest = new StateCensusAnalyser();
-            analyserTest.countTheRecord1();
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCod.csv",new CSVstates());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
             Assert.assertEquals(CensusExceptions.ExceptionType.IO_EXCEPTION, censusExceptions.type);
@@ -28,8 +32,8 @@ public class StateCensusAnalyserTest {
     @Test
     public void whenIncorrectFileTye_Throws_Exception_In_CSVStatesData() {
         try {
-            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
-            int count = censusAnalyser.countTheRecord1();
+
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCode.pdf",new CSVstates());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
             Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
@@ -40,8 +44,7 @@ public class StateCensusAnalyserTest {
     @Test
     public void whenIncorrectDelimiter_Throws_Exception_In_CSVStatesData() {
         try {
-            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
-            censusAnalyser.countTheRecord1();
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCode.csv",new CSVstates());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
             Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
@@ -51,26 +54,28 @@ public class StateCensusAnalyserTest {
     @Test
     public void whenNoHeader_IsGiven_ThrowsException_In_CSVStatesData() {
         try {
-            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
-            censusAnalyser.countTheRecord1();
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCode.csv", new CSVstates());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
-            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
+            //Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
 
         }
     }
 
     @Test
-    public void givenNumberOf_Records_Match_In_CSVCensusData() throws CensusExceptions {
-        StateCensusAnalyser analyserTest = new StateCensusAnalyser();
-        int count = analyserTest.countTheRecord2();
-        Assert.assertEquals(29, count);
+    public void givenNumberOf_Records_Match_In_CSVCensusData()  {
+        try {
+           int count = analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCensusData.csv", new CSVCensus());
+            Assert.assertEquals(29, count);
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+        }
+
     }
     @Test
     public void throws_IOException_In_CSVCensus_Data() {
         try {
-            StateCensusAnalyser analyserTest = new StateCensusAnalyser();
-            analyserTest.countTheRecord2();
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCensusDat.csv",new CSVCensus());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
             Assert.assertEquals(CensusExceptions.ExceptionType.IO_EXCEPTION, censusExceptions.type);
@@ -80,8 +85,7 @@ public class StateCensusAnalyserTest {
     @Test
     public void whenIncorrectFileTye_Throws_Exception_in_CSVCensusData() {
         try {
-            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
-            int count = censusAnalyser.countTheRecord2();
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCensusData.pdf",new CSVCensus());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
             Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
@@ -92,8 +96,7 @@ public class StateCensusAnalyserTest {
     @Test
     public void whenIncorrectDelimiter_Throws_Exception_In_CSVCensusData() {
         try {
-            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
-            censusAnalyser.countTheRecord2();
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCensusData.csv", new CSVCensus());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
             Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
@@ -103,8 +106,7 @@ public class StateCensusAnalyserTest {
     @Test
     public void whenNoHeader_IsGiven_ThrowsException_In_CSVCensusData() {
         try {
-            StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
-            censusAnalyser.countTheRecord2();
+            analyserTest.readRecords("/home/admin293/Desktop/IndianStateCensus/StateCensusData.csv", new CSVCensus());
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
             Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE, censusExceptions.type);
