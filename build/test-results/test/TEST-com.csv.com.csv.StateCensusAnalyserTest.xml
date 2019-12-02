@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.csv.com.csv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-30T12:32:29" hostname="admin293-H110M-H" time="0.041">
+<testsuite name="com.csv.com.csv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-02T06:45:19" hostname="admin293-H110M-H" time="0.117">
   <properties/>
-  <testcase name="whenNoHeader_IsGiven_ThrowsException" classname="com.csv.com.csv.StateCensusAnalyserTest" time="0.041"/>
+  <testcase name="throws_IOException_with_File_2" classname="com.csv.com.csv.StateCensusAnalyserTest" time="0.117"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
