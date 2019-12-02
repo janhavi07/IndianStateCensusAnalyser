@@ -8,14 +8,14 @@ import java.io.IOException;
 public class StateCensusAnalyserTest {
     // private static final String SAMPLE_CSV_FILE_PATH = "/home/admin293/Desktop/IndianStateCensus/StateCode.csv";
     @Test
-    public void givenNumberOf_Records_Match() throws CensusExceptions {
+    public void givenNumberOf_Records_Match_In_CSVStatesData() throws CensusExceptions {
         StateCensusAnalyser analyserTest = new StateCensusAnalyser();
         int count = analyserTest.countTheRecord1();
         Assert.assertEquals(37, count);
     }
 
     @Test
-    public void throws_IOException() {
+    public void throws_IOException_In_CSVStatesData() {
         try {
             StateCensusAnalyser analyserTest = new StateCensusAnalyser();
             analyserTest.countTheRecord1();
@@ -26,7 +26,7 @@ public class StateCensusAnalyserTest {
     }
 
     @Test
-    public void whenIncorrectFileTye_Throws_Exception() {
+    public void whenIncorrectFileTye_Throws_Exception_In_CSVStatesData() {
         try {
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             int count = censusAnalyser.countTheRecord1();
@@ -38,7 +38,7 @@ public class StateCensusAnalyserTest {
     }
 
     @Test
-    public void whenIncorrectDelimiter_Throws_Exception() {
+    public void whenIncorrectDelimiter_Throws_Exception_In_CSVStatesData() {
         try {
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             censusAnalyser.countTheRecord1();
@@ -49,7 +49,7 @@ public class StateCensusAnalyserTest {
     }
 
     @Test
-    public void whenNoHeader_IsGiven_ThrowsException() {
+    public void whenNoHeader_IsGiven_ThrowsException_In_CSVStatesData() {
         try {
             StateCensusAnalyser censusAnalyser = new StateCensusAnalyser();
             censusAnalyser.countTheRecord1();
@@ -61,7 +61,7 @@ public class StateCensusAnalyserTest {
     }
 
     @Test
-    public void givenNumberOf_Records_Match_In_CSVFile2() throws CensusExceptions {
+    public void givenNumberOf_Records_Match_In_CSVCensusData() throws CensusExceptions {
         StateCensusAnalyser analyserTest = new StateCensusAnalyser();
         int count = analyserTest.countTheRecord2();
         Assert.assertEquals(29, count);
@@ -111,10 +111,6 @@ public class StateCensusAnalyserTest {
 
         }
     }
-
-
-
-
 
 }
 
