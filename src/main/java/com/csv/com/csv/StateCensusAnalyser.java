@@ -7,37 +7,45 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
-public class StateCensusAnalyser {
+import static java.util.Collections.sort;
 
-    public CsvToBean createBuilder(String file, Object object) throws CensusExceptions {
+public class StateCensusAnalyser {
+    //ArrayList<CSVCensus> censusList=new ArrayList<>();
+
+    public CsvToBean<CSVCensus> createBuilder() throws CensusExceptions {
         Reader reader = null;
         try {
-            reader = Files.newBufferedReader(Paths.get(file));
+            reader = Files.newBufferedReader(Paths.get("/home/admin293/Desktop/IndianStateCensus/StateCensusData.csv"));
         } catch (IOException e) {
             e.printStackTrace();
             throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION, "Input file errow");
         }
-        CsvToBean<Object> csvToBean = new CsvToBeanBuilder<Object>(reader)
-                .withType(Object.class)
+        CsvToBean<CSVCensus> csvToBean = new CsvToBeanBuilder<CSVCensus>(reader)
+                .withType(CSVCensus.class)
                 .withIgnoreLeadingWhiteSpace(true)
                 .build();
         return csvToBean;
 
     }
 
-    public int readRecords(String file, Object object) throws CensusExceptions {
+    public void readRecords(String file, Object object) throws CensusExceptions {
 
-        int noOfRecordCount = 0;
-        CsvToBean csvToBean = null;
+       // int noOfRecordCount = 0;
+       // CsvToBean csvToBean = null;
         try {
-            csvToBean = createBuilder(file, object);
-            Iterator<Object> csvStatesIterator = csvToBean.iterator();
-            while (csvStatesIterator.hasNext()) {
-                object = csvStatesIterator.next();
-                noOfRecordCount++;
+            CsvToBean<CSVCensus> csvToBean = createBuilder();
+            Iterator<CSVCensus> csvIterator =csvToBean.iterator();
+            ArrayList<CSVCensus> censusList=new ArrayList<>();
+            while (csvIterator.hasNext()) {
+                CSVCensus census =csvIterator.next();
+                censusList.add(census);
+               //noOfRecordCount++;
             }
+           toSort(censusList);
         } catch (NullPointerException e) {
             e.printStackTrace();
             throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_DELIMITER, "Incorrect header or delimiter format");
@@ -47,9 +55,37 @@ public class StateCensusAnalyser {
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
         }
-        return noOfRecordCount;
+       // return noOfRecordCount;
     }
-}
+
+    private void toSort(ArrayList<CSVCensus> censusList) {
+        sort(censusList);
+        censusList.stream().map(CSVCensus::getState).forEach(System.out::print);
+    }
+
+
+//    private static final String FILE_NAME="/home/admin293/Desktop/IndianStateCensus/StateCensusData.csv";
+//    public int readIntoJson(){
+//        Reader reader= null;
+//        try {
+//            reader = Files.newBufferedReader(Paths.get(FILE_NAME));
+//
+//        CsvToBeanBuilder<CSVCensus> csvToBeanBuilder=new CsvToBeanBuilder<>(reader);
+//        csvToBeanBuilder.withType(CSVCensus.class);
+//        csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
+//        CsvToBean<CSVCensus> csvToBean=csvToBeanBuilder.build();
+//        Iterator<CSVCensus> iterator=csvToBean.iterator();
+//        List<CSVCensus> csvCensuses=csvToBean.parse();
+//        CSVCensus census=new CSVCensus();
+//        while(iterator.hasNext()){
+//
+//        }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return 0;
+    }
+
 
 
 
