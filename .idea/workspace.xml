@@ -2,33 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815c5c32-945f-4f72-8249-710771bd81a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReplicaStateCode.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/ReplicaCSVStates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateAnalyserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateCensusData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StateCensusData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/StateCensusData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/CSVStates.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/StateAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/StateAnalyser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/StateCensusAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/csv/com/csv/StateCensusAnalyser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/csv/com/csv/StateCensusAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/csv/com/csv/StateCensusAnalyserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.csv.com.csv.StateCensusAnalyserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.csv.com.csv.StateCensusAnalyserTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.csv.com.csv.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.csv.com.csv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.csv.com.csv.StateCensusAnalyserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.csv.com.csv.StateCensusAnalyserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVstates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateAnalyser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateCensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateCensusAnalyser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/csv/com/csv/StateCensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/csv/com/csv/StateCensusAnalyserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVCensus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVCensus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVstates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVstates.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +68,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest.whenNoHeader_IsGiven_ThrowsException_In_CSVCensusData">
+  <component name="RunManager" selected="Application.StateAnalyserFactory">
+    <configuration name="StateAnalyserFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.csv.com.csv.StateAnalyserFactory" />
+      <module name="IndianStateCensusProblem.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.csv.com.csv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StateCensusAnalyserTest.throws_IOException_In_CSVStatesData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -148,26 +142,6 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception_in_CSVCensusData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.csv.com.csv.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception_in_CSVCensusData&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="StateCensusAnalyserTest.whenNoHeader_IsGiven_ThrowsException_In_CSVCensusData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -190,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StateAnalyserFactory" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.whenNoHeader_IsGiven_ThrowsException_In_CSVCensusData" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.whenIncorrectDelimiter_Throws_Exception_In_CSVCensusData" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception_In_CSVStatesData" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.throws_IOException_In_CSVStatesData" />
-        <item itemvalue="Gradle.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception_in_CSVCensusData" />
       </list>
     </recent_temporary>
   </component>

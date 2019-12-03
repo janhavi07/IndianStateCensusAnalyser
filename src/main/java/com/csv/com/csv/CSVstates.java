@@ -4,13 +4,13 @@ import com.opencsv.bean.CsvBindByName;
 
 public class CSVstates {
     @CsvBindByName
-    private Integer SrNo;
+    private String SrNo;
 
     @CsvBindByName
     private String StateName;
 
     @CsvBindByName
-    private Integer TIN;
+    private String TIN;
 
     @CsvBindByName
     private  String StateCode;
@@ -19,7 +19,7 @@ public class CSVstates {
         return SrNo;
     }
 
-    public void setSrNo(Integer srNo) {
+    public void setSrNo(String srNo) {
         SrNo = srNo;
     }
 
@@ -35,7 +35,7 @@ public class CSVstates {
         return TIN;
     }
 
-    public void setTIN(Integer TIN) {
+    public void setTIN(String TIN) {
         this.TIN = TIN;
     }
 
