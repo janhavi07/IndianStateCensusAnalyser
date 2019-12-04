@@ -1,15 +1,15 @@
 package com.csv.com.csv;
 
+import com.google.gson.Gson;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.*;
 
 import static java.util.Collections.sort;
 
@@ -32,20 +32,20 @@ public class StateCensusAnalyser {
 
     }
 
-    public void readRecords(String file, Object object) throws CensusExceptions {
+    public int readRecords(String file, Object object) throws CensusExceptions {
 
-       // int noOfRecordCount = 0;
-       // CsvToBean csvToBean = null;
+         int noOfRecordCount = 0;
         try {
             CsvToBean<CSVCensus> csvToBean = createBuilder();
-            Iterator<CSVCensus> csvIterator =csvToBean.iterator();
-            ArrayList<CSVCensus> censusList=new ArrayList<>();
+            Iterator<CSVCensus> csvIterator = csvToBean.iterator();
+            ArrayList<CSVCensus> censusList = new ArrayList<>();
             while (csvIterator.hasNext()) {
-                CSVCensus census =csvIterator.next();
+                CSVCensus census = csvIterator.next();
                 censusList.add(census);
-               //noOfRecordCount++;
+                noOfRecordCount++;
             }
-           toSort(censusList);
+            toSortAccordingToState(censusList);
+            boolean write=writeToGson(censusList);
         } catch (NullPointerException e) {
             e.printStackTrace();
             throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_DELIMITER, "Incorrect header or delimiter format");
@@ -54,37 +54,35 @@ public class StateCensusAnalyser {
             throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_TYPE, "Incorrect Type");
         } catch (CensusExceptions censusExceptions) {
             censusExceptions.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION,"Wrong file input");
         }
-       // return noOfRecordCount;
+         return noOfRecordCount;
     }
 
-    private void toSort(ArrayList<CSVCensus> censusList) {
-        sort(censusList);
-        censusList.stream().map(CSVCensus::getState).forEach(System.out::print);
+    private boolean writeToGson(ArrayList<CSVCensus> censusList) throws IOException {
+        String SAMPLE_JSON_FILE_PATH="/home/admin293/Desktop/IndianStateCensus/StateCensusDataJson.json";
+        Gson gson=new Gson();
+        String json=gson.toJson(censusList);
+        FileWriter writer=new FileWriter(SAMPLE_JSON_FILE_PATH);
+        writer.write(json);
+        writer.close();
+        return true;
+    }
+
+    private void toSortAccordingToState(ArrayList<CSVCensus> censusList) {
+        Comparator<CSVCensus> c = (s1, s2) -> s1.getState().compareTo(s2.getState());
+        censusList.sort(c);
+    }
+
+    private void toSortAccordingToDensity(ArrayList<CSVCensus> censusList) {
+        Comparator<CSVCensus> c = (s1, s2) -> s1.getDensityPerSqKm().compareTo(s2.getDensityPerSqKm());
+        censusList.sort(c);
     }
 
 
-//    private static final String FILE_NAME="/home/admin293/Desktop/IndianStateCensus/StateCensusData.csv";
-//    public int readIntoJson(){
-//        Reader reader= null;
-//        try {
-//            reader = Files.newBufferedReader(Paths.get(FILE_NAME));
-//
-//        CsvToBeanBuilder<CSVCensus> csvToBeanBuilder=new CsvToBeanBuilder<>(reader);
-//        csvToBeanBuilder.withType(CSVCensus.class);
-//        csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
-//        CsvToBean<CSVCensus> csvToBean=csvToBeanBuilder.build();
-//        Iterator<CSVCensus> iterator=csvToBean.iterator();
-//        List<CSVCensus> csvCensuses=csvToBean.parse();
-//        CSVCensus census=new CSVCensus();
-//        while(iterator.hasNext()){
-//
-//        }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return 0;
-    }
+}
 
 
 

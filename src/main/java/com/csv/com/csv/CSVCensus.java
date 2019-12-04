@@ -49,6 +49,11 @@ public class CSVCensus implements Comparable<CSVCensus> {
     }
 
     @Override
+    public String toString() {
+        return getState() + " " + getPopulation() + " " + getAreaInSqKm() + " " + getDensityPerSqKm();
+    }
+
+    @Override
     public int compareTo(CSVCensus census) {
         return this.State.compareTo(census.getState());
     }
