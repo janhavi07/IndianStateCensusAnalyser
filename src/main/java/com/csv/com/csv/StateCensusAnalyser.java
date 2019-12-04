@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+import static java.util.Collections.reverseOrder;
 import static java.util.Collections.sort;
 
 public class StateCensusAnalyser {
@@ -44,7 +45,7 @@ public class StateCensusAnalyser {
                 censusList.add(census);
                 noOfRecordCount++;
             }
-            toSortAccordingToState(censusList);
+            toSortAccordingToDensity(censusList);
             boolean write=writeToGson(censusList);
         } catch (NullPointerException e) {
             e.printStackTrace();
@@ -78,7 +79,7 @@ public class StateCensusAnalyser {
 
     private void toSortAccordingToDensity(ArrayList<CSVCensus> censusList) {
         Comparator<CSVCensus> c = (s1, s2) -> s1.getDensityPerSqKm().compareTo(s2.getDensityPerSqKm());
-        censusList.sort(c);
+        Collections.sort(censusList, reverseOrder());
     }
 
 

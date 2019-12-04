@@ -116,6 +116,15 @@ public class StateCensusAnalyserTest {
         }
     }
 
+    @Test
+    public void whenTheListIs_Sorted_AccordingTo_Density() {
+        try{
+            analyserTest.readRecords(CLASS_PATH,CLASS_NAME);
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE,censusExceptions.type);
+        }
+    }
 }
 
 
