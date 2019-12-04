@@ -45,7 +45,7 @@ public class StateCensusAnalyser {
                 censusList.add(census);
                 noOfRecordCount++;
             }
-            toSortAccordingToDensity(censusList);
+            toSortAccordingToArea(censusList);
             boolean write=writeToGson(censusList);
         } catch (NullPointerException e) {
             e.printStackTrace();
@@ -86,6 +86,12 @@ public class StateCensusAnalyser {
         Comparator<CSVCensus> c = (s1, s2) -> s1.getPopulation().compareTo(s2.getPopulation());
         Collections.sort(censusList, reverseOrder());
     }
+
+    private void toSortAccordingToArea(ArrayList<CSVCensus> censusList) {
+        Comparator<CSVCensus> c = (s1, s2) -> s1.getAreaInSqKm().compareTo(s2.getAreaInSqKm());
+        Collections.sort(censusList, reverseOrder());
+    }
+
 
 }
 
