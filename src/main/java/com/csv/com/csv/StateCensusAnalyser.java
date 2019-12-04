@@ -82,6 +82,10 @@ public class StateCensusAnalyser {
         Collections.sort(censusList, reverseOrder());
     }
 
+    private void toSortAccordingToPopulation(ArrayList<CSVCensus> censusList) {
+        Comparator<CSVCensus> c = (s1, s2) -> s1.getPopulation().compareTo(s2.getPopulation());
+        Collections.sort(censusList, reverseOrder());
+    }
 
 }
 

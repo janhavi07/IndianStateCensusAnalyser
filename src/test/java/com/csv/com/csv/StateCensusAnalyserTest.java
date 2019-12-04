@@ -125,6 +125,16 @@ public class StateCensusAnalyserTest {
             Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE,censusExceptions.type);
         }
     }
+
+    @Test
+    public void whenTheListIs_Sorted_AccordingTo_Population() {
+        try{
+            analyserTest.readRecords(CLASS_PATH,CLASS_NAME);
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+            Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE,censusExceptions.type);
+        }
+    }
 }
 
 
