@@ -8,13 +8,13 @@ public class CSVCensus implements Comparable<CSVCensus> {
     private String State;
 
     @CsvBindByName
-    private Double Population;
+    private String Population;
 
     @CsvBindByName
     private Double AreaInSqKm;
 
     @CsvBindByName
-    private Double DensityPerSqKm;
+    private String DensityPerSqKm;
 
     public String getState() {
         return State;
@@ -24,11 +24,11 @@ public class CSVCensus implements Comparable<CSVCensus> {
         State = state;
     }
 
-    public Double getPopulation() {
+    public String getPopulation() {
         return Population;
     }
 
-    public void setPopulation(Double population) {
+    public void setPopulation(String population) {
         Population = population;
     }
 
@@ -40,11 +40,11 @@ public class CSVCensus implements Comparable<CSVCensus> {
         AreaInSqKm = areaInSqKm;
     }
 
-    public Double getDensityPerSqKm() {
+    public String getDensityPerSqKm() {
         return DensityPerSqKm;
     }
 
-    public void setDensityPerSqKm(Double densityPerSqKm) {
+    public void setDensityPerSqKm(String densityPerSqKm) {
         DensityPerSqKm = densityPerSqKm;
     }
 

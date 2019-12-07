@@ -144,6 +144,17 @@ public class StateCensusAnalyserTest {
             Assert.assertEquals(CensusExceptions.ExceptionType.INCORRECT_TYPE,censusExceptions.type);
         }
     }
+
+    @Test
+    public void sotrttt() {
+        try {
+            analyserTest.sorting(CLASS_PATH,CLASS_NAME,"Density");
+            Assert.assertTrue(true);
+        } catch (CensusExceptions censusExceptions) {
+            censusExceptions.printStackTrace();
+        }
+
+    }
 }
 
 

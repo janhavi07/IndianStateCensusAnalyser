@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815c5c32-945f-4f72-8249-710771bd81a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/Temp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateCensusDataJson.json" beforeDir="false" afterPath="$PROJECT_DIR$/StateCensusDataJson.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVCensus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/CSVCensus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateCensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/StateCensusAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/Temp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csv/com/csv/Temp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/csv/com/csv/StateCensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/csv/com/csv/StateCensusAnalyserTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,13 +66,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest.whenTheListIs_Sorted_AccordingTo_Area">
-    <configuration name="StateCensusAnalyserTest.givenNumberOf_Records_Match_In_CSVCensusData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest.sotrttt">
+    <configuration name="StateCensusAnalyserTest.sotrttt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.csv.com.csv.StateCensusAnalyserTest.givenNumberOf_Records_Match_In_CSVCensusData&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.csv.com.csv.StateCensusAnalyserTest.sotrttt&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -166,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StateCensusAnalyserTest.sotrttt" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.whenTheListIs_Sorted_AccordingTo_Area" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.whenTheListIs_Sorted_AccordingTo_Density" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.whenIncorrectFileTye_Throws_Exception_in_CSVCensusData" />
         <item itemvalue="Gradle.StateCensusAnalyserTest.whenFileIncorrect_Should_throw_IOException" />
-        <item itemvalue="Gradle.StateCensusAnalyserTest.givenNumberOf_Records_Match_In_CSVCensusData" />
       </list>
     </recent_temporary>
   </component>

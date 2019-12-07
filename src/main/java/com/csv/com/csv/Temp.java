@@ -44,7 +44,7 @@ public class Temp {
                 noOfRecordCount++;
             }
             toSortAccordingToState(censusList);
-            boolean write=writeToGson(censusList);
+            boolean write = writeToGson(censusList);
         } catch (NullPointerException e) {
             e.printStackTrace();
             throw new CensusExceptions(CensusExceptions.ExceptionType.INCORRECT_DELIMITER, "Incorrect header or delimiter format");
@@ -55,16 +55,16 @@ public class Temp {
             censusExceptions.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-            throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION,"Wrong file input");
+            throw new CensusExceptions(CensusExceptions.ExceptionType.IO_EXCEPTION, "Wrong file input");
         }
         return noOfRecordCount;
     }
 
     private boolean writeToGson(ArrayList<CSVCensus> censusList) throws IOException {
-        String SAMPLE_JSON_FILE_PATH="/home/admin293/Desktop/IndianStateCensus/StateCensusDataJson.json";
-        Gson gson=new Gson();
-        String json=gson.toJson(censusList);
-        FileWriter writer=new FileWriter(SAMPLE_JSON_FILE_PATH);
+        String SAMPLE_JSON_FILE_PATH = "/home/admin293/Desktop/IndianStateCensus/StateCensusDataJson.json";
+        Gson gson = new Gson();
+        String json = gson.toJson(censusList);
+        FileWriter writer = new FileWriter(SAMPLE_JSON_FILE_PATH);
         writer.write(json);
         writer.close();
         return true;
@@ -74,14 +74,15 @@ public class Temp {
         Comparator<CSVCensus> c = (s1, s2) -> s1.getState().compareTo(s2.getState());
         censusList.sort(c);
     }
-    public static void main(String[] args) {
-        StateCensusAnalyser analyser=new StateCensusAnalyser();
-    }
-    public void sortTheList(ArrayList<CSVCensus> censusList){
-
-            }
-
-
-        }
-    }
+//    public static void main(String[] args) {
+//        StateCensusAnalyser analyser=new StateCensusAnalyser();
+//    }
+//    public void sortTheList(ArrayList<CSVCensus> censusList){
+//
+//            }
+//
+//
+//        }
+//    }
+//}
 }
